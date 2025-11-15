@@ -1,7 +1,7 @@
 import java.util.List;
 
 public class Delegate implements Runnable {
-    private String url;
+    private final String url;
 
     public Delegate(String url) {
         this.url = url;

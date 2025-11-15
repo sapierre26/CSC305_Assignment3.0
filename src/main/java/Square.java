@@ -1,6 +1,6 @@
 public class Square {
-    private String path;
-    private int lines;
+    private final String path;
+    private final int lines;
 
     public Square(String path, int lines) {
         this.path = path;

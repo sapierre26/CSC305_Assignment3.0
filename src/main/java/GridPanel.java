@@ -1,3 +1,5 @@
+import javax.swing.*;
+import java.awt.*;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 
@@ -6,7 +8,7 @@ public class GridPanel extends JPanel implements PropertyChangeListener {
     private boolean ready = false;
 
     public GridPanel() {
-        setBackgroundColor(Color.WHITE);
+        setBackground(Color.WHITE);
         Blackboard.getInstance().addPropertyChangeListener(this);
     }
 
@@ -14,7 +16,7 @@ public class GridPanel extends JPanel implements PropertyChangeListener {
     public void propertyChange(PropertyChangeEvent evt) {
         System.out.println(evt.getPropertyName());
 
-        if (evt.getPropertyName().equals(blackboardLoading)) {
+        if (evt.getPropertyName().equals("blackboardLoading")) {
             loading = true;
             ready = false;
         } else if (evt.getPropertyName().equals("blackboardReady")) {
@@ -35,7 +37,7 @@ public class GridPanel extends JPanel implements PropertyChangeListener {
         }
     }
 
-    private void drawSqaures(Graphics g) {
+    private void drawSquares(Graphics g) {
         java.util.List<Square> squares = Blackboard.getInstance().getSquares();
 
         int cols = (int) Math.ceil(Math.sqrt(squares.size()));
@@ -64,7 +66,7 @@ public class GridPanel extends JPanel implements PropertyChangeListener {
         }
     }
 
-    private void drawLoading(graphics g) {
+    private void drawLoading(Graphics g) {
         g.setColor(Color.BLACK);
         setFont(new Font("Arial", Font.PLAIN, 12));
         g.drawString("Loading...", getWidth() / 2 - 30, getHeight() / 2);

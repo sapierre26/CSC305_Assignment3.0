@@ -1,9 +1,10 @@
 import java.beans.PropertyChangeSupport;
+import java.util.List;
 import java.util.Vector;
 
 public class Blackboard extends PropertyChangeSupport {
     private static Blackboard instance;
-    private Vector<Square> squares;
+    private final Vector<Square> squares;
     private boolean ready = false;
     private boolean loading = false;
 

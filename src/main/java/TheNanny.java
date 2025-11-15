@@ -3,7 +3,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class TheNanny implements ActionListener {
-    private JTextField urlField;
+    private final JTextField urlField;
 
     public TheNanny(JTextField field) {
         this.urlField = field;

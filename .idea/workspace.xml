@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e9b7ade1-bc37-4a32-9655-8e50e126393c" name="Changes" comment="" />
+    <list default="true" id="e9b7ade1-bc37-4a32-9655-8e50e126393c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/GitHubHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Blackboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Blackboard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Delegate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Delegate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GridPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GridPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Square.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Square.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/TheNanny.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TheNanny.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,7 +50,8 @@
     "kotlin-language-version-configured": "true",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2"
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
   }
 }]]></component>
   <component name="RecentsManager">
