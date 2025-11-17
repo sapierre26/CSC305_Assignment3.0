@@ -1,4 +1,6 @@
 import javax.swing.*;
+import javax.swing.tree.DefaultMutableTreeNode;
+import javax.swing.tree.DefaultTreeModel;
 import java.awt.*;
 
 public class Main extends JFrame {
@@ -18,6 +20,20 @@ public class Main extends JFrame {
         add(gridPanel, BorderLayout.CENTER);
 
         okbutton.addActionListener(controller);
+
+        DefaultMutableTreeNode root = new DefaultMutableTreeNode();
+        DefaultTreeModel repoTree = new DefaultTreeModel(root);
+        JTree tree = new JTree(repoTree);
+
+        JScrollPane scroll = new JScrollPane(tree);
+        scroll.setPreferredSize(new Dimension(200, 400));
+        add(scroll, BorderLayout.WEST);
+
+        JTabbedPane mainTabs = new JTabbedPane();
+        mainTabs.addTab("Grid", new JPanel());
+        mainTabs.addTab("Metrics", new JPanel());
+        mainTabs.addTab("Diagram", new JPanel());
+        add(mainTabs, BorderLayout.CENTER);
     }
 
     public static void main(String[] args) {

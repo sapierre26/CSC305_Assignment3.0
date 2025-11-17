@@ -45,6 +45,10 @@ public class GridPanel extends JPanel implements PropertyChangeListener {
         int squareWidth = getWidth() / cols;
         int squareHeight = getHeight() /rows;
 
+        if (getWidth() == 0 || getHeight() == 0 || rows == 0 || cols == 0) {
+            return;
+        }
+
         for (int i = 0; i < squares.size(); i++) {
             Square square = squares.get(i);
             int col = i & cols;
