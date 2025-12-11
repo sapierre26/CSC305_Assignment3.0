@@ -1,3 +1,4 @@
+// @author - Sanaia Pierre
 import javax.swing.*;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.DefaultTreeModel;
@@ -8,6 +9,9 @@ public class Main extends JFrame {
         JTextField urlField = new JTextField();
         JButton okbutton = new JButton("OK");
         JPanel gridPanel = new GridPanel();
+        JPanel metricsPanel = new MetricsPanel();
+        String umlSource = UMLGenerator.generatePlantUML();
+        JPanel diagramPanel = new DiagramPanel(umlSource);
         TheNanny controller = new TheNanny(urlField);
 
         JPanel top = new JPanel(new BorderLayout());
@@ -30,10 +34,13 @@ public class Main extends JFrame {
         add(scroll, BorderLayout.WEST);
 
         JTabbedPane mainTabs = new JTabbedPane();
-        mainTabs.addTab("Grid", new JPanel());
-        mainTabs.addTab("Metrics", new JPanel());
-        mainTabs.addTab("Diagram", new JPanel());
+        mainTabs.addTab("Grid", gridPanel);
+        mainTabs.addTab("Metrics", metricsPanel);
+        mainTabs.addTab("Diagram", diagramPanel);
         add(mainTabs, BorderLayout.CENTER);
+
+        JPanel statusBar = new JPanel(new BorderLayout());
+        add(statusBar, BorderLayout.SOUTH);
     }
 
     public static void main(String[] args) {
@@ -44,3 +51,7 @@ public class Main extends JFrame {
         main.setVisible(true);
     }
 }
+
+// https://github.com/javiergs/GameofLife/tree/main/src
+// https://github.com/CSC3100/Tool-Logging/tree/main/src
+// https://github.com/sapierre26/Tool-Logging-Test/tree/main/src
