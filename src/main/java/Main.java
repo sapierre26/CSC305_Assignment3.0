@@ -10,8 +10,8 @@ public class Main extends JFrame {
         JButton okbutton = new JButton("OK");
         JPanel gridPanel = new GridPanel();
         JPanel metricsPanel = new MetricsPanel();
-        String umlSource = UMLGenerator.generatePlantUML();
-        JPanel diagramPanel = new DiagramPanel(umlSource);
+//        String umlSource = UMLGenerator.generatePlantUML();
+//        JPanel diagramPanel = new DiagramPanel(umlSource);
         TheNanny controller = new TheNanny(urlField);
 
         JPanel top = new JPanel(new BorderLayout());
@@ -36,7 +36,7 @@ public class Main extends JFrame {
         JTabbedPane mainTabs = new JTabbedPane();
         mainTabs.addTab("Grid", gridPanel);
         mainTabs.addTab("Metrics", metricsPanel);
-        mainTabs.addTab("Diagram", diagramPanel);
+        mainTabs.addTab("Diagram", new JPanel());
         add(mainTabs, BorderLayout.CENTER);
 
         JPanel statusBar = new JPanel(new BorderLayout());

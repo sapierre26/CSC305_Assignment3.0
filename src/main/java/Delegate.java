@@ -29,7 +29,6 @@ public class Delegate implements Runnable {
                     Metrics metrics = square.getMetrics();
                     metrics.setTotalClasses(countClasses(fileContent));
                     metrics.setTotalAbstractClasses(countAbstractClasses(fileContent));
-                    metrics.setOutgoingDependencies(countImports(fileContent));
 
                     Blackboard.getInstance().addSquare(square);
                 }
@@ -40,12 +39,6 @@ public class Delegate implements Runnable {
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
-
-    private int countImports(String content) {
-        return (int) content.lines()
-                .filter(s -> s.trim().startsWith("import "))
-                .count();
     }
 
     private int countLines(String content) {
